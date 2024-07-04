@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Karaoke Song</title>
+</head>
+<body>
+    <h1>Your Random Karaoke Song</h1>
+    <p><strong>Verse 1:</strong> {{ verse1 }}</p>
+    <audio controls>
+        <source src="{{ url_for('static', filename=verse1_audio) }}">
+        Your browser does not support the audio element.
+    </audio>
+    <p><strong>Chorus:</strong> {{ chorus }}</p>
+    <audio controls>
+        <source src="{{ url_for('static', filename=chorus_audio) }}">
+        Your browser does not support the audio element.
+    </audio>
+    <p><strong>Verse 2:</strong> {{ verse2 }}</p>
+    <audio controls>
+        <source src="{{ url_for('static', filename=verse2_audio) }}">
+        Your browser does not support the audio element.
+    </audio>
+    <p><strong>Chorus:</strong> {{ chorus }}</p>
+    <audio controls>
+        <source src="{{ url_for('static', filename=chorus_audio) }}">
+        Your browser does not support the audio element.
+    </audio>
+    <a href="/">Generate Another Song</a>
+</body>
+</html>
